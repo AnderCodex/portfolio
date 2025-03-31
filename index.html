@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portafolio de Anderson Sosa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -26,47 +26,55 @@
         </div>
     </nav>
 
-    <header class="text-center py-5 bg-light">
-        <img src="image/mi-foto.jpg" class="rounded-circle" width="150" alt="Foto de Anderson Sosa">
-        <h1 class="mt-3">Anderson Sosa</h1>
-        <p class="lead">Analista Programador</p>
+    <header class="text-center bg-primary text-white py-5">
+        <div class="container">
+            <img src="image/mi-foto.jpg" alt="Foto de Anderson Sosa" class="rounded-circle mb-3" width="150">
+            <h1>Anderson Sosa</h1>
+            <p class="lead">Analista Programador | Especializado en .NET</p>
+        </div>
     </header>
 
-    <section id="proyectos" class="container py-5">
-        <h2 class="text-center mb-4">Proyectos Destacados</h2>
+    <section id="about" class="container my-5">
+        <h2 class="text-center">Sobre Mí</h2>
+        <p class="text-center">Soy un programador especializado en desarrollo backend con experiencia en .NET y tecnologías relacionadas.</p>
+    </section>
+
+    <section id="proyectos" class="container my-5">
+        <h2 class="text-center">Proyectos</h2>
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
-                <div class="card h-100">
-                    <img src="image/proyecto2.jpg" class="card-img-top" alt="Aeropuertos Americanos">
+                <div class="card">
+                    <img src="image/proyecto1.jpg" class="card-img-top" alt="Proyecto 1">
                     <div class="card-body">
                         <h5 class="card-title">Aeropuertos Americanos</h5>
-                        <p class="card-text">Sistema web para la gestión de aeropuertos, vuelos y venta de pasajes en América.</p>
-                        <a href="https://github.com/AnderCodex/AeropuertosAmericanos.git" class="btn btn-primary">Ver proyecto</a>
+                        <p class="card-text">Sistema web para gestión de aeropuertos y vuelos en América.</p>
+                        <a href="https://github.com/AnderCodex/AeropuertosAmericanos.git" class="btn btn-primary">Ver Proyecto</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100">
-                    <img src="image/proyecto2.jpg" class="card-img-top" alt="Sistema de Gestión de Consultas">
+                <div class="card">
+                    <img src="image/proyecto2.jpg" class="card-img-top" alt="Proyecto 2">
                     <div class="card-body">
-                        <h5 class="card-title">Gestión de Consultas</h5>
-                        <p class="card-text">Sistema web para gestionar consultas médicas con autenticación y estadísticas.</p>
-                        <a href="https://github.com/AnderCodex/Sist-de-Gestion-de-Solicitudes-Consultorio.git" class="btn btn-primary">Ver proyecto</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="image/Proyecto3.jpg" class="card-img-top" alt="Sistema de Ventas Farmacia">
-                    <div class="card-body">
-                        <h5 class="card-title">Sistema de Ventas "Farmacia"</h5>
-                        <p class="card-text">Sistema de ventas con autenticación y gestión de clientes, productos y ventas.</p>
-                        <a href="https://github.com/AnderCodex/Sistema-de-Ventas.git" class="btn btn-primary">Ver proyecto</a>
+                        <h5 class="card-title">Gestión de Consultas Médicas</h5>
+                        <p class="card-text">Sistema para administración de consultas y pacientes.</p>
+                        <a href="https://github.com/AnderCodex/Sist-de-Gestion-de-Solicitudes-Consultorio.git" class="btn btn-primary">Ver Proyecto</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="contact" class="text-center bg-dark text-white py-5">
+        <h2>Contacto</h2>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:skipperyt2020@gmail.com" class="text-white">skipperyt2020@gmail.com</a></p>
+        <p><i class="fab fa-github"></i> <a href="https://github.com/AnderCodex" class="text-white">GitHub</a></p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/anderson-sosa-720b2b260/" class="text-white">LinkedIn</a></p>
+    </section>
+
+    <footer class="text-center py-3 bg-primary text-white">
+        <p>&copy; 2024 Anderson Sosa</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
