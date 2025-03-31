@@ -4,235 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Anderson Sosa</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ5mPflz6Z8xP3NfXg2bCdx96PbBdJ7nkA6v3/FXTk/aX5Uo1jIE+/jsFcua" crossorigin="anonymous">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 50px 0;
-            text-align: center;
-        }
-        header img {
-            width: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-        .contact-button {
-            color: white;
-            background-color: #333;
-            border: none;
-            padding: 10px 20px;
-            margin: 5px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .project-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            border-radius: 50%;
-            padding: 15px;
-            color: white;
-            font-size: 24px;
-        }
-        .whatsapp-button:hover {
-            background-color: #128C7E;
-        }
-    </style>
 </head>
-<body class="light-theme">
+<body>
+  
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Anderson Sosa</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
-                <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-                <li class="nav-item">
-                    <button id="theme-toggle" class="btn btn-dark">🌙</button>
-                </li>
-            </ul>
-        </div>
+    <nav>
+        <ul>
+            <li><a href="#about" class="contact-button">Sobre mí</a></li>
+            <li><a href="#cursos" class="contact-button">Cursos</a></li>
+            <li><a href="#proyectos" class="contact-button">Proyectos</a></li>
+            <li><a href="#contact" class="contact-button">Contacto</a></li>
+            <li><button id="theme-toggle" class="theme-toggle-button">🌙</button></li>
+        </ul>
     </nav>
 
-    <!-- Header -->
     <header>
-        <div class="container">
+        <div class="header-content">
             <img src="image/mi-foto.jpg" alt="Foto de Anderson Sosa" class="profile-pic">
-            <h1>Anderson Sosa</h1>
-            <p class="backend-title">Analista Programador</p>
+            <div class="header-text">
+                <h1>Anderson Sosa</h1>
+                <p class="backend-title">Analista Programador</p>
+            </div>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="py-5">
+    <section id="about">
         <div class="container">
             <h2>Sobre mí</h2>
-            <p>Soy un programador especializado en desarrollo backend con experiencia en .NET y tecnologías relacionadas. Actualmente me encuentro cursando segundo año de Analista de Sistemas en el Instituto Bios Ubicado en Montevideo-Uruguay.</p>
+            <p>Soy un programador especializado en desarrollo backend con experiencia en .NET y tecnologías relacionadas.
+                Actualmente me encuentro cursando segundo año de Analista de Sistemas en el Instituto Bios Ubicado en Montevideo-Uruguay.
+            </p>
             <h3>Tecnologías que Utilizo</h3>
-            <div class="row">
-                <div class="col-3 text-center">
-                    <img src="image/csharp.png" alt="C#" class="tech-icon img-fluid">
+            <div class="technologies">
+                <div class="technology-item">
+                    <img src="image/csharp.png" alt="C#" class="tech-icon">
                     <p>C#</p>
                 </div>
-                <div class="col-3 text-center">
-                    <img src="image/html.png" alt="HTML" class="tech-icon img-fluid">
+                <div class="technology-item">
+                    <img src="image/html.png" alt="HTML" class="tech-icon">
                     <p>HTML</p>
                 </div>
-                <div class="col-3 text-center">
-                    <img src="image/XML.png" alt="XML" class="tech-icon img-fluid">
+                <div class="technology-item">
+                    <img src="image/XML.png" alt="XML" class="tech-icon">
                     <p>XML</p>
                 </div>
-                <div class="col-3 text-center">
-                    <img src="image/CSS.png" alt="CSS" class="tech-icon img-fluid">
+                <div class="technology-item">
+                    <img src="image/CSS.png" alt="CSS" class="tech-icon">
                     <p>CSS</p>
                 </div>
+                <div class="technology-item">
+                    <img src="image/sqlserver.png" alt="SQL Server" class="tech-icon">
+                    <p>SQL Server</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Cursos Section -->
-    <section id="cursos" class="py-5 bg-light">
+    <section id="cursos">
         <div class="container">
             <h2>Cursos</h2>
-            <div class="row">
-                <div class="col-md-4">
+            <div class="certificates">
+                <div class="certificate">
                     <a href="image/Programador_Web_.NET.pdf" download="Certificado_Bios_Uruguay.pdf">
-                        <div class="card">
-                            <img src="image/certificado1.jpg" alt="Certificado Bios Uruguay" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Curso de Programación .NET - Bios Uruguay</h5>
-                            </div>
-                        </div>
+                        <img src="image/certificado1.jpg" alt="Certificado Bios Uruguay">
+                        <p>Curso de Programación .NET - Bios Uruguay</p>
                     </a>
                 </div>
+                
             </div>
         </div>
     </section>
 
-    <!-- Proyectos Section -->
-    <section id="proyectos" class="py-5">
-        <div class="container">
-            <h2>Proyectos Destacados</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="project-item">
-                        <h3>Aeropuertos Americanos</h3>
-                        <img src="image/proyecto2.jpg" alt="Proyecto 1" class="img-fluid">
-                        <p>Este proyecto es un sistema web para Aeropuertos Americanos, una empresa que gestiona aeropuertos, vuelos y la venta de pasajes en América.</p>
-                        <a href="https://github.com/AnderCodex/AeropuertosAmericanos.git" class="btn btn-primary" target="_blank">Ver Proyecto</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="project-item">
-                        <h3>Sistema de Gestión de Solicitudes de Consultas para Mutualista</h3>
-                        <img src="image/proyecto2.jpg" alt="Proyecto 2" class="img-fluid">
-                        <p>Sistema web para gestionar solicitudes de consultas en una mutualista.</p>
-                        <a href="https://github.com/AnderCodex/Sist-de-Gestion-de-Solicitudes-Consultorio.git" class="btn btn-primary" target="_blank">Ver Proyecto</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="project-item">
-                        <h3>Sistema de Ventas "Farmacia"</h3>
-                        <img src="image/Proyecto3.jpg" alt="Proyecto 3" class="img-fluid">
-                        <p>Un sistema de ventas para una farmacia con dos interfaces web.</p>
-                        <a href="https://github.com/AnderCodex/Sistema-de-Ventas.git" class="btn btn-primary" target="_blank">Ver Proyecto</a>
-                    </div>
-                </div>
-            </div>
+    <section id="proyectos">
+        <h2>Proyectos Destacados</h2>
+        <div class="project-item">
+            <h3>Aeropuertos Americanos</h3>
+            <img src="image/proyecto2.jpg" alt="Proyecto 1">
+            <p>Descripción del Proyecto
+                Este proyecto es un sistema web para AeropuertosAmericanos, una empresa que gestiona aeropuertos,
+                vuelos y la venta de pasajes en América. El sistema permitirá la gestión de ciudades, aeropuertos,
+                vuelos y clientes, además de proporcionar funcionalidades para la compra y venta de pasajes.</p>
+               <p> Descarga: https://github.com/AnderCodex/AeropuertosAmericanos.git</p>
+        </div>
+        <div class="project-item">
+            <h3>Sistema de Gestión de Solicitudes de Consultas para Mutualista</h3>
+            <img src="image/proyecto2.jpg" alt="Proyecto 2">
+            <p>Sistema web para gestionar solicitudes de consultas en una mutualista. Permite administrar empleados, policlínicas, consultorios, pacientes,
+                consultas y solicitudes. Incluye autenticación, asignación de números,
+                marcación de asistencia y estadísticas. 
+                Desarrollado en .NET Framework 4.5.2/4.6 con SQL Server y Entity Framework Database First.</p>
+          <p>  Descarga: https://github.com/AnderCodex/Sist-de-Gestion-de-Solicitudes-Consultorio.git</p>
+        </div>
+
+         <div class="project-item">
+            <h3>Sistema de Ventas "Farmacia"</h3>
+             <img src="image/Proyecto3.jpg" alt="Proyecto 3">
+            <p>El proyecto es un sistema de ventas para una farmacia con dos interfaces web: un sitio ASP.NET
+                público para visualizar artículos y una aplicación MVC para empleados que gestiona categorías,
+                clientes y ventas. Usa .NET, C#, SQL Server y arquitectura en 3 capas. Incluye autenticación,
+                CRUD, historial de estados y seguimiento de entregas.</p>
+           <p> Descarga: https://github.com/AnderCodex/Sistema-de-Ventas.git</p>
+        </div>
+        <!-- Ampliar proyectos a futuro -->
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <div class="contact-buttons">
+            <a href="https://www.linkedin.com/in/anderson-sosa-720b2b260/" class="contact-button linkedin-button">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="mailto:skipperyt2020@gmail.com" class="contact-button gmail-button">
+                <i class="fas fa-envelope"></i> Gmail
+            </a>
+            <a href="https://github.com/AnderCodex" class="contact-button github-button">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <!-- Enlace para descargar el CV -->
+            <a href="image/CV Anderson Marcelo.pdf" download="Anderson_Sosa_CV.pdf" class="contact-button cv-button">
+                <i class="fas fa-file-pdf"></i> Descargar CV
+            </a>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light">
-        <div class="container">
-            <h2>Contacto</h2>
-            <div class="d-flex justify-content-start">
-                <a href="https://www.linkedin.com/in/anderson-sosa-720b2b260/" class="contact-button btn btn-primary me-2">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="mailto:skipperyt2020@gmail.com" class="contact-button btn btn-primary me-2">
-                    <i class="fas fa-envelope"></i> Gmail
-                </a>
-                <a href="https://github.com/AnderCodex" class="contact-button btn btn-primary me-2">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="image/CV Anderson Marcelo.pdf" download="Anderson_Sosa_CV.pdf" class="contact-button btn btn-primary">
-                    <i class="fas fa-file-pdf"></i> Descargar CV
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- WhatsApp Button -->
     <a href="https://wa.me/+59892967616" class="whatsapp-button" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Anderson Sosa.</p>
     </footer>
-
-    <script>
-        const themeToggleButton = document.getElementById('theme-toggle');
-        const body = document.body;
-        const elementsToToggle = document.querySelectorAll('nav, header, #about, #cursos, #proyectos, #contact, footer');
-        const savedTheme = localStorage.getItem('theme');
-
-        if (savedTheme) {
-            body.classList.add(savedTheme);
-            elementsToToggle.forEach(el => el.classList.add(savedTheme));
-        }
-
-        themeToggleButton.addEventListener('click', () => {
-            if (body.classList.contains('light-theme')) {
-                body.classList.remove('light-theme');
-                body.classList.add('dark-theme');
-                elementsToToggle.forEach(el => {
-                    el.classList.remove('light-theme');
-                    el.classList.add('dark-theme');
-                });
-                themeToggleButton.textContent = '🌙'; // Cambia el icono
-                localStorage.setItem('theme', 'dark-theme');
-            } else {
-                body.classList.remove('dark-theme');
-                body.classList.add('light-theme');
-                elementsToToggle.forEach(el => {
-                    el.classList.remove('dark-theme');
-                    el.classList.add('light-theme');
-                });
-                themeToggleButton.textContent = '☀️'; // Cambia el icono
-                localStorage.setItem('theme', 'light-theme');
-            }
-        });
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0xMi6fLJScXJh+H8A6POGoCkPpo2L1kR5R+p2o7me+0v2oxh" crossorigin="anonymous"></script>
 </body>
+
+<script>
+    // Selecciona el botón y el body
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+    const elementsToToggle = document.querySelectorAll('nav, header, #about, #cursos, #proyectos, #contact, .certificate, .project-item, .contact-button, footer');
+
+    // Carga el tema guardado en localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        body.classList.add(savedTheme);
+        elementsToToggle.forEach(el => el.classList.add(savedTheme));
+    }
+
+    // Cambia entre el tema claro y oscuro
+    themeToggleButton.addEventListener('click', () => {
+        if (body.classList.contains('light-theme')) {
+            body.classList.remove('light-theme');
+            body.classList.add('dark-theme');
+            elementsToToggle.forEach(el => {
+                el.classList.remove('light-theme');
+                el.classList.add('dark-theme');
+            });
+            themeToggleButton.textContent = '🌙'; // Cambia el icono
+            localStorage.setItem('theme', 'dark-theme');
+        } else {
+            body.classList.remove('dark-theme');
+            body.classList.add('light-theme');
+            elementsToToggle.forEach(el => {
+                el.classList.remove('dark-theme');
+                el.classList.add('light-theme');
+            });
+            themeToggleButton.textContent = '☀️'; // Cambia el icono
+            localStorage.setItem('theme', 'light-theme');
+        }
+    });
+</script>
 </html>
