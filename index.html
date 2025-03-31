@@ -39,8 +39,7 @@
             border-color: #0f3460;
         }
         
-        .dark-theme .skills-section,
-        .dark-theme .projects-section {
+        .dark-theme .skills-section {
             background-color: #0f3460 !important;
         }
         
@@ -147,7 +146,7 @@
             background-color: #0f3460 !important;
         }
         
-        /* Nuevos estilos para mejor contraste */
+        /* Estilos para habilidades */
         .skills-section {
             background-color: #e9ecef;
             padding: 3rem 0;
@@ -179,10 +178,32 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         }
         
+        .skill-category {
+            margin-bottom: 2.5rem;
+        }
+        
+        .skill-category-title {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+        
+        .dark-theme .skill-category-title {
+            color: var(--light-color);
+            border-bottom-color: var(--primary-color);
+        }
+        
+        /* Estilos corregidos para proyectos */
         .projects-section {
             background-color: #e9ecef;
             padding: 3rem 0;
             border-radius: 10px;
+        }
+        
+        .dark-theme .projects-section {
+            background-color: #1a1a2e !important;
         }
         
         .project-card {
@@ -190,11 +211,13 @@
             border-radius: 8px;
             overflow: hidden;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .dark-theme .project-card {
-            background-color: #1a1a2e;
-            color: white;
+            background-color: #16213e;
+            color: #f8f9fa;
+            border: 1px solid #0f3460;
         }
         
         .project-card-body {
@@ -207,7 +230,7 @@
         }
         
         .dark-theme .project-card-title {
-            color: var(--light-color);
+            color: #f8f9fa;
         }
         
         .project-card-text {
@@ -224,8 +247,13 @@
             color: var(--primary-color);
         }
         
-        .btn-outline-primary:hover {
-            background-color: var(--primary-color);
+        .dark-theme .btn-outline-primary {
+            border-color: #3498db;
+            color: #3498db;
+        }
+        
+        .dark-theme .btn-outline-primary:hover {
+            background-color: #3498db;
             color: white;
         }
     </style>
@@ -275,7 +303,7 @@
                         <div class="card-body">
                             <p class="card-text">
                                 Soy un programador especializado en desarrollo backend con experiencia en .NET y tecnologías relacionadas.
-                                Actualmente me encuentro cursando segundo año de Analista de Sistemas en el Instituto Bios ubicado en Montevideo, Uruguay.
+                                Actualmente me encuentro cursando 3er año de Analista de Sistemas en el Instituto Bios ubicado en Montevideo, Uruguay.
                             </p>
                             <p class="card-text">
                                 Apasionado por la resolución de problemas y el desarrollo de soluciones tecnológicas eficientes. 
@@ -294,35 +322,100 @@
             <h2 class="section-title text-center">Habilidades Técnicas</h2>
             <div class="skills-section">
                 <div class="container">
-                    <div class="row justify-content-center g-4">
-                        <div class="col-md-2 col-6">
-                            <div class="skill-card">
-                                <img src="image/csharp.png" alt="C#" class="tech-icon mb-3">
-                                <h5>C#</h5>
+                    <!-- Lenguajes y Metodologías -->
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Lenguajes y Metodologías</h3>
+                        <div class="row justify-content-center g-4">
+                            <div class="col-md-2 col-4">
+                                <div class="skill-card">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" class="tech-icon mb-3">
+                                    <h5>C#</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4">
+                                <div class="skill-card">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL" class="tech-icon mb-3">
+                                    <h5>SQL</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4">
+                                <div class="skill-card">
+                                    <img src="image/UML.png" alt="UML" class="tech-icon mb-3">
+                                    <h5>UML</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4">
+                                <div class="skill-card">
+                                    <img src="image/n-layer.png" alt="Arquitectura N-Capas" class="tech-icon mb-3">
+                                    <h5>N-Capas</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4">
+                                <div class="skill-card">
+                                    <img src="image/soa.png" alt="SOA" class="tech-icon mb-3">
+                                    <h5>SOAP</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4">
+                                <div class="skill-card">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt="MVC" class="tech-icon mb-3">
+                                    <h5>MVC</h5>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-2 col-6">
-                            <div class="skill-card">
-                                <img src="image/html.png" alt="HTML" class="tech-icon mb-3">
-                                <h5>HTML</h5>
+                    </div>
+                    
+                    <!-- Tecnologías y Plataformas -->
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Tecnologías y Plataformas</h3>
+                        <div class="row justify-content-center g-4">
+                            <div class="col-md-2 col-4">
+                                <div class="skill-card">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt=".NET Framework" class="tech-icon mb-3">
+                                    <h5>.NET</h5>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-2 col-6">
-                            <div class="skill-card">
-                                <img src="image/XML.png" alt="XML" class="tech-icon mb-3">
-                                <h5>XML</h5>
+                            <div class="col-md-2 col-4">
+                                <div class="skill-card">
+                                    <img src="image/webforms.png" alt="WebForms" class="tech-icon mb-3">
+                                    <h5>WebForms</h5>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-2 col-6">
-                            <div class="skill-card">
-                                <img src="image/CSS.png" alt="CSS" class="tech-icon mb-3">
-                                <h5>CSS</h5>
+                            <div class="col-md-2 col-4">
+                                <div class="skill-card">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt="ASP.NET" class="tech-icon mb-3">
+                                    <h5>ASP.NET</h5>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-2 col-6">
-                            <div class="skill-card">
-                                <img src="image/sqlserver.png" alt="SQL Server" class="tech-icon mb-3">
-                                <h5>SQL Server</h5>
+                            <div class="col-md-2 col-4">
+                                <div class="skill-card">
+                                    <img src="image/adonet.png" alt="ADO.NET" class="tech-icon mb-3">
+                                    <h5>ADO.NET</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4">
+                                <div class="skill-card">
+                                    <img src="image/xml.png" alt="XML" class="tech-icon mb-3">
+                                    <h5>XML</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4">
+                                <div class="skill-card">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt="Entity Framework" class="tech-icon mb-3">
+                                    <h5>Entity Framework</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4">
+                                <div class="skill-card">
+                                    <img src="image/api-rest.png" alt="API REST" class="tech-icon mb-3">
+                                    <h5>API REST</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-4">
+                                <div class="skill-card">
+                                    <img src="image/razor.png" alt="Razor" class="tech-icon mb-3">
+                                    <h5>Razor</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -352,7 +445,7 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section - Versión Corregida -->
     <section id="projects" class="py-5">
         <div class="container">
             <h2 class="section-title text-center">Proyectos Destacados</h2>
@@ -361,9 +454,9 @@
                     <div class="row justify-content-center g-4">
                         <!-- Proyecto 1 -->
                         <div class="col-lg-4 col-md-6">
-                            <div class="project-card shadow-sm h-100">
-                                <img src="image/proyecto2.jpg" class="img-fluid project-img" alt="Aeropuertos Americanos">
-                                <div class="project-card-body">
+                            <div class="card project-card h-100">
+                                <img src="image/proyecto2.jpg" class="card-img-top project-img" alt="Aeropuertos Americanos">
+                                <div class="card-body project-card-body">
                                     <h4 class="project-card-title">Aeropuertos Americanos</h4>
                                     <p class="project-card-text">
                                         Sistema web para gestionar aeropuertos, vuelos y venta de pasajes en América. Permite la gestión de ciudades, aeropuertos, vuelos y clientes.
@@ -375,9 +468,9 @@
                         
                         <!-- Proyecto 2 -->
                         <div class="col-lg-4 col-md-6">
-                            <div class="project-card shadow-sm h-100">
-                                <img src="image/proyecto2.jpg" class="img-fluid project-img" alt="Sistema de Gestión de Solicitudes">
-                                <div class="project-card-body">
+                            <div class="card project-card h-100">
+                                <img src="image/proyecto2.jpg" class="card-img-top project-img" alt="Sistema de Gestión de Solicitudes">
+                                <div class="card-body project-card-body">
                                     <h4 class="project-card-title">Sistema de Gestión de Solicitudes</h4>
                                     <p class="project-card-text">
                                         Sistema web para mutualistas con autenticación, asignación de números y estadísticas. Desarrollado con .NET Framework y SQL Server.
@@ -389,9 +482,9 @@
                         
                         <!-- Proyecto 3 -->
                         <div class="col-lg-4 col-md-6">
-                            <div class="project-card shadow-sm h-100">
-                                <img src="image/Proyecto3.jpg" class="img-fluid project-img" alt="Sistema de Ventas Farmacia">
-                                <div class="project-card-body">
+                            <div class="card project-card h-100">
+                                <img src="image/Proyecto3.jpg" class="card-img-top project-img" alt="Sistema de Ventas Farmacia">
+                                <div class="card-body project-card-body">
                                     <h4 class="project-card-title">Sistema de Ventas "Farmacia"</h4>
                                     <p class="project-card-text">
                                         Sistema de ventas con interfaz pública y panel administrativo. Desarrollado con .NET, C# y arquitectura en 3 capas.
