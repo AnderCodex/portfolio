@@ -39,6 +39,11 @@
             border-color: #0f3460;
         }
         
+        .dark-theme .skills-section,
+        .dark-theme .projects-section {
+            background-color: #0f3460 !important;
+        }
+        
         .navbar {
             background-color: var(--secondary-color);
         }
@@ -94,16 +99,19 @@
             transition: transform 0.3s, box-shadow 0.3s;
             margin-bottom: 20px;
             height: 100%;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         
         .project-img {
             height: 200px;
             object-fit: cover;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
         }
         
         .contact-btn {
@@ -137,6 +145,88 @@
         
         .dark-theme footer {
             background-color: #0f3460 !important;
+        }
+        
+        /* Nuevos estilos para mejor contraste */
+        .skills-section {
+            background-color: #e9ecef;
+            padding: 3rem 0;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .dark-theme .skills-section {
+            background-color: #0f3460 !important;
+        }
+        
+        .skill-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .dark-theme .skill-card {
+            background-color: #1a1a2e;
+            color: white;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .projects-section {
+            background-color: #e9ecef;
+            padding: 3rem 0;
+            border-radius: 10px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .dark-theme .project-card {
+            background-color: #1a1a2e;
+            color: white;
+        }
+        
+        .project-card-body {
+            padding: 1.5rem;
+        }
+        
+        .project-card-title {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .dark-theme .project-card-title {
+            color: var(--light-color);
+        }
+        
+        .project-card-text {
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .dark-theme .project-card-text {
+            color: #ddd;
+        }
+        
+        .btn-outline-primary {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
         }
     </style>
 </head>
@@ -199,29 +289,43 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-5 bg-light">
+    <section id="skills" class="py-5">
         <div class="container">
             <h2 class="section-title text-center">Habilidades Técnicas</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-2 col-4 text-center mb-4">
-                    <img src="image/csharp.png" alt="C#" class="tech-icon mb-2">
-                    <p>C#</p>
-                </div>
-                <div class="col-md-2 col-4 text-center mb-4">
-                    <img src="image/html.png" alt="HTML" class="tech-icon mb-2">
-                    <p>HTML</p>
-                </div>
-                <div class="col-md-2 col-4 text-center mb-4">
-                    <img src="image/XML.png" alt="XML" class="tech-icon mb-2">
-                    <p>XML</p>
-                </div>
-                <div class="col-md-2 col-4 text-center mb-4">
-                    <img src="image/CSS.png" alt="CSS" class="tech-icon mb-2">
-                    <p>CSS</p>
-                </div>
-                <div class="col-md-2 col-4 text-center mb-4">
-                    <img src="image/sqlserver.png" alt="SQL Server" class="tech-icon mb-2">
-                    <p>SQL Server</p>
+            <div class="skills-section">
+                <div class="container">
+                    <div class="row justify-content-center g-4">
+                        <div class="col-md-2 col-6">
+                            <div class="skill-card">
+                                <img src="image/csharp.png" alt="C#" class="tech-icon mb-3">
+                                <h5>C#</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="skill-card">
+                                <img src="image/html.png" alt="HTML" class="tech-icon mb-3">
+                                <h5>HTML</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="skill-card">
+                                <img src="image/XML.png" alt="XML" class="tech-icon mb-3">
+                                <h5>XML</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="skill-card">
+                                <img src="image/CSS.png" alt="CSS" class="tech-icon mb-3">
+                                <h5>CSS</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-6">
+                            <div class="skill-card">
+                                <img src="image/sqlserver.png" alt="SQL Server" class="tech-icon mb-3">
+                                <h5>SQL Server</h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -249,55 +353,52 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light">
+    <section id="projects" class="py-5">
         <div class="container">
             <h2 class="section-title text-center">Proyectos Destacados</h2>
-            
-            <div class="row justify-content-center">
-                <!-- Proyecto 1 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="image/proyecto2.jpg" class="card-img-top project-img" alt="Aeropuertos Americanos">
-                        <div class="card-body">
-                            <h5 class="card-title">Aeropuertos Americanos</h5>
-                            <p class="card-text">
-                                Sistema web para gestionar aeropuertos, vuelos y venta de pasajes en América. Permite la gestión de ciudades, aeropuertos, vuelos y clientes.
-                            </p>
+            <div class="projects-section">
+                <div class="container">
+                    <div class="row justify-content-center g-4">
+                        <!-- Proyecto 1 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card shadow-sm h-100">
+                                <img src="image/proyecto2.jpg" class="img-fluid project-img" alt="Aeropuertos Americanos">
+                                <div class="project-card-body">
+                                    <h4 class="project-card-title">Aeropuertos Americanos</h4>
+                                    <p class="project-card-text">
+                                        Sistema web para gestionar aeropuertos, vuelos y venta de pasajes en América. Permite la gestión de ciudades, aeropuertos, vuelos y clientes.
+                                    </p>
+                                    <a href="https://github.com/AnderCodex/AeropuertosAmericanos.git" class="btn btn-outline-primary" target="_blank">Ver en GitHub</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-footer bg-transparent">
-                            <a href="https://github.com/AnderCodex/AeropuertosAmericanos.git" class="btn btn-outline-primary" target="_blank">Ver en GitHub</a>
+                        
+                        <!-- Proyecto 2 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card shadow-sm h-100">
+                                <img src="image/proyecto2.jpg" class="img-fluid project-img" alt="Sistema de Gestión de Solicitudes">
+                                <div class="project-card-body">
+                                    <h4 class="project-card-title">Sistema de Gestión de Solicitudes</h4>
+                                    <p class="project-card-text">
+                                        Sistema web para mutualistas con autenticación, asignación de números y estadísticas. Desarrollado con .NET Framework y SQL Server.
+                                    </p>
+                                    <a href="https://github.com/AnderCodex/Sist-de-Gestion-de-Solicitudes-Consultorio.git" class="btn btn-outline-primary" target="_blank">Ver en GitHub</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- Proyecto 2 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="image/proyecto2.jpg" class="card-img-top project-img" alt="Sistema de Gestión de Solicitudes">
-                        <div class="card-body">
-                            <h5 class="card-title">Sistema de Gestión de Solicitudes</h5>
-                            <p class="card-text">
-                                Sistema web para gestionar solicitudes de consultas en mutualistas. Incluye autenticación, asignación de números y estadísticas.
-                            </p>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <a href="https://github.com/AnderCodex/Sist-de-Gestion-de-Solicitudes-Consultorio.git" class="btn btn-outline-primary" target="_blank">Ver en GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Proyecto 3 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="image/Proyecto3.jpg" class="card-img-top project-img" alt="Sistema de Ventas Farmacia">
-                        <div class="card-body">
-                            <h5 class="card-title">Sistema de Ventas "Farmacia"</h5>
-                            <p class="card-text">
-                                Sistema de ventas con interfaz pública y panel de administración. Desarrollado con .NET, C#, SQL Server y arquitectura en 3 capas.
-                            </p>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <a href="https://github.com/AnderCodex/Sistema-de-Ventas.git" class="btn btn-outline-primary" target="_blank">Ver en GitHub</a>
+                        
+                        <!-- Proyecto 3 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card shadow-sm h-100">
+                                <img src="image/Proyecto3.jpg" class="img-fluid project-img" alt="Sistema de Ventas Farmacia">
+                                <div class="project-card-body">
+                                    <h4 class="project-card-title">Sistema de Ventas "Farmacia"</h4>
+                                    <p class="project-card-text">
+                                        Sistema de ventas con interfaz pública y panel administrativo. Desarrollado con .NET, C# y arquitectura en 3 capas.
+                                    </p>
+                                    <a href="https://github.com/AnderCodex/Sistema-de-Ventas.git" class="btn btn-outline-primary" target="_blank">Ver en GitHub</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
