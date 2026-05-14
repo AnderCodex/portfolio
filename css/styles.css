@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #3498db;
-    --primary-dark: #2980b9;
-    --secondary-color: #2c3e50;
-    --accent-color: #e74c3c;
-    --success-color: #27ae60;
-    --light-color: #ecf0f1;
-    --dark-color: #2c3e50;
-    --gradient-primary: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
-    --gradient-hero: linear-gradient(120deg, rgba(52,152,219,0.9), rgba(44,62,80,0.85));
+    --primary-color: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary-color: #1e293b;
+    --accent-color: #10b981;
+    --success-color: #22c55e;
+    --light-color: #f1f5f9;
+    --dark-color: #0f172a;
+    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    --gradient-hero: linear-gradient(120deg, rgba(99,102,241,0.9), rgba(139,92,246,0.85));
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
     --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
     --shadow-lg: 0 8px 32px rgba(0,0,0,0.18);
@@ -40,7 +40,7 @@ body {
     left: 0;
     height: 3px;
     width: 0%;
-    background: linear-gradient(90deg, #3498db, #2ecc71, #3498db);
+    background: linear-gradient(90deg, #6366f1, #10b981, #6366f1);
     background-size: 200% 100%;
     animation: gradient-shift 2s ease infinite;
     z-index: 10001;
@@ -502,6 +502,44 @@ body {
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 500;
+}
+
+.carousel-item .project-img {
+    filter: brightness(0.85);
+}
+
+.carousel-item .project-img:hover {
+    filter: brightness(1);
+}
+
+.modal-body {
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%) !important;
+    color: #e0e0e0;
+}
+
+.modal-body .carousel-item img {
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.modal-body p {
+    background: rgba(0,0,0,0.4);
+    padding: 15px;
+    border-radius: 8px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.modal-body .project-tech-badges {
+    background: rgba(0,0,0,0.3);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.modal-body .tech-badge {
+    background: rgba(52,152,219,0.3);
+    color: #5dade2;
+}
 }
 
 .dark-theme .tech-badge {
