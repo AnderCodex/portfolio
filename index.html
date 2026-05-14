@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portafolio Profesional - Anderson Sosa</title>
-    <meta name="description" content="Portafolio profesional de Anderson Sosa — Analista Programador especializado en .NET y Java. Proyectos, cursos y contacto.">
+    <title>Anderson Sosa — Analista Programador | .NET & Java</title>
+    <meta name="description" content="Portafolio profesional de Anderson Sosa — Analista Programador especializado en .NET y Java. Desarrollo backend robusto, APIs REST y aplicaciones móviles.">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="icon" href="image/mi-foto.jpg" type="image/jpeg">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" type="image/svg+xml">
 
     <!-- Social -->
     <meta property="og:title" content="Anderson Sosa — Analista Programador">
@@ -28,6 +28,9 @@
 </head>
 <body>
 
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
@@ -38,9 +41,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Educación</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certificaciones</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-link nav-link" aria-label="Cambiar tema">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -52,16 +63,20 @@
         <div class="container hero-content py-5">
             <div class="row align-items-center">
                 <div class="col-md-4 text-center mb-4 mb-md-0">
-                    <img src="image/mi-foto.jpg" alt="Anderson Sosa" class="profile-img rounded-circle" width="220" height="220" loading="lazy" decoding="async">
+                    <img src="image/mi-foto.jpg" alt="Anderson Sosa" class="profile-img rounded-circle" width="220" height="220" loading="eager" decoding="async">
                 </div>
                 <div class="col-md-8 text-md-start text-center">
-                    <h1 class="display-4">Hola, soy Anderson Sosa</h1>
-                    <p class="lead mb-3">Analista Programador — Desarrollo backend robusto con .NET y Java. Construyo soluciones escalables y eficientes para empresas.</p>
-                    <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-2">
+                    <div class="hero-status mb-3">
+                        <span class="status-dot"></span>
+                        Disponible para proyectos y contratos
+                    </div>
+                    <h1 class="display-4 mb-2">Hola, soy Anderson Sosa</h1>
+                    <p class="lead mb-3"><span class="typing-text" id="typing-text"></span></p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-2 mb-3">
                         <a href="#contact" class="btn btn-primary btn-lg">Contrátame</a>
                         <a href="#projects" class="btn btn-outline-light btn-lg">Ver proyectos</a>
                     </div>
-                    <p class="mt-3 text-muted small">Disponible para proyectos y contratos. Ubicación: Montevideo, Uruguay.</p>
+                    <p class="text-light opacity-75 small"><i class="fas fa-map-marker-alt me-1"></i> Montevideo, Uruguay</p>
                 </div>
             </div>
         </div>
@@ -73,16 +88,31 @@
             <h2 class="section-title text-center">Sobre mí</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <p class="card-text">
-                                Soy un programador especializado en desarrollo backend con experiencia en .NET y tecnologías relacionadas.
-                                Actualmente me encuentro cursando 3er año de Analista de Sistemas en el Instituto Bios ubicado en Montevideo, Uruguay.
+                    <div class="card about-card shadow-sm">
+                        <div class="card-body p-4">
+                            <p class="card-text about-text">
+                                Con base técnica desde mi bachillerato en Informática (UTU Rivera, 2015), en 2022 ingresé al Instituto Universitario BIOS donde además obtuve la certificación Analista GeneXus Jr.
+                                Actualmente finalizo el Proyecto de Fin de Carrera para obtener el título de Analista de Sistemas.
                             </p>
-                            <p class="card-text">
-                                Apasionado por la resolución de problemas y el desarrollo de soluciones tecnológicas eficientes. 
-                                Me enfoco en crear aplicaciones robustas y escalables con código limpio y bien estructurado.
+                            <p class="card-text about-text">
+                                Apasionado por la resolución de problemas y el desarrollo de soluciones tecnológicas eficientes.
+                                Me enfoco en crear aplicaciones robustas, escalables y con código limpio.
+                                Mi stack principal incluye C#, .NET, Spring Boot, SQL Server y MySQL.
                             </p>
+                            <div class="about-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">8+</span>
+                                    <span class="stat-label">Proyectos</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">3+</span>
+                                    <span class="stat-label">Tecnologías</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">3er</span>
+                                    <span class="stat-label">Año en curso</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -90,6 +120,37 @@
         </div>
     </section>
 
+    <!-- Services -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title text-center">Servicios</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-server"></i></div>
+                        <h3 class="service-title">Desarrollo Backend</h3>
+                        <p>APIs REST robustas con .NET y Spring Boot, autenticación JWT, y arquitecturas escalables para aplicaciones empresariales.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-database"></i></div>
+                        <h3 class="service-title">Bases de Datos</h3>
+                        <p>Diseño, modelado y optimización de bases de datos relacionales con SQL Server, MySQL y Entity Framework.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3 class="service-title">Apps Móviles</h3>
+                        <p>Aplicaciones multiplataforma con Flutter/Dart para iOS y Android, con almacenamiento local y sincronización.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
     <section id="skills" class="py-5">
         <div class="container">
             <h2 class="section-title text-center">Habilidades Técnicas</h2>
@@ -178,412 +239,570 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center text-muted small">
-                    <p>Experiencia en arquitectura de aplicaciones (3 capas / n-layer), control de versiones con Git/GitHub, Visual Studio, y herramientas de gestión de bases de datos.</p>
-                </div>
-            </div>
-            <!-- Ingeniería de Software -->
+            <!-- Herramientas -->
             <div class="skill-category mb-5" data-aos="fade-up">
-                <h3 class="skill-category-title text-center">Ingeniería de Software</h3>
+                <h3 class="skill-category-title text-center">Herramientas y Metodologías</h3>
                 <div class="row justify-content-center mt-3">
                     <div class="col-lg-8 text-center">
-                        <p>Mención en Ingeniería de Software: diseño y análisis de sistemas, modelado con UML, patrones de diseño, pruebas unitarias, integración continua (CI/CD) y metodologías ágiles.</p>
+                        <p>Git/GitHub, Visual Studio, VS Code, arquitectura de 3 capas y n-layer, UML, patrones de diseño, CI/CD, metodologías ágiles (Scrum).</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-        <!-- Projects -->
-        <section id="projects" class="py-5">
-            <div class="container">
-                <h2 class="section-title text-center">Proyectos Destacados</h2>
-
-                <!-- C# / .NET -->
-                <div class="projects-section mb-5" data-aos="fade-up">
-                    <h3 class="section-subtitle">C# / .NET</h3>
-                    <div class="row justify-content-center g-4">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card project-card h-100">
-                                <img src="image/bakground-code.gif" class="card-img-top project-img" alt="Aeropuertos Americanos" width="800" height="400" loading="lazy" decoding="async">
-                                <div class="card-body project-card-body">
-                                    <h4 class="project-card-title">Aeropuertos Americanos</h4>
-                                    <p class="project-card-text">Sistema web para gestionar aeropuertos, vuelos y venta de pasajes en América. Permite la gestión de ciudades, aeropuertos, vuelos y clientes.</p>
-                                    <div class="d-flex gap-2">
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProject1">Vista</button>
-                                        <a href="https://github.com/AnderCodex/AeropuertosAmericanos.git" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">GitHub</a>
-                                    </div>
-                                </div>
+    <!-- Education -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title text-center">Formación Académica</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2022 - Presente</span>
+                                <h4 class="timeline-title">Analista de Sistemas</h4>
+                                <p class="timeline-subtitle">Instituto Universitario BIOS — Montevideo, Uruguay</p>
+                                <p class="timeline-description">Carrera de 3 años orientada al análisis, diseño y desarrollo de sistemas de software. Actualmente finalizando el Proyecto de Fin de Carrera.</p>
+                                <ul class="timeline-details mt-3">
+                                    <li><strong>Año 1 — Programador Web .NET:</strong> POO en C#, diseño e implementación de bases de datos (SQL Server), aplicaciones web con ASP.NET MVC y ADO.NET.</li>
+                                    <li><strong>Año 2 — Analista Programador Web .NET:</strong> Administración de bases de datos, diseño web avanzado, desarrollo asistido con IA (Copilot).</li>
+                                    <li><strong>Año 3 — Analista de Sistemas:</strong> Java + Spring Boot, MySQL, arquitectura MVC, REST APIs, Ingeniería de Software (UML, testing), aplicaciones móviles con Flutter/Dart, proyecto de fin de carrera.</li>
+                                </ul>
                             </div>
                         </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card project-card h-100">
-                                <img src="image/bakground-code.gif" class="card-img-top project-img" alt="Sistema de Gestión de Solicitudes" width="800" height="400" loading="lazy" decoding="async">
-                                <div class="card-body project-card-body">
-                                    <h4 class="project-card-title">Sistema de Gestión de Solicitudes</h4>
-                                    <p class="project-card-text">Sistema web para mutualistas con autenticación, asignación de números y estadísticas. Desarrollado con .NET Framework y SQL Server.</p>
-                                    <div class="d-flex gap-2">
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProject2">Vista</button>
-                                        <a href="https://github.com/AnderCodex/Sist-de-Gestion-de-Solicitudes-Consultorio.git" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">GitHub</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card project-card h-100">
-                                <img src="image/Proyecto3.jpg" class="card-img-top project-img" alt="Sistema de Ventas Farmacia" width="800" height="400" loading="lazy" decoding="async">
-                                <div class="card-body project-card-body">
-                                    <h4 class="project-card-title">Sistema de Ventas "Farmacia"</h4>
-                                    <p class="project-card-text">Sistema de ventas con interfaz pública y panel administrativo. Desarrollado con .NET, C# y arquitectura en 3 capas.</p>
-                                    <div class="d-flex gap-2">
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProject3">Vista</button>
-                                        <a href="https://github.com/AnderCodex/Sistema-de-Ventas.git" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">GitHub</a>
-                                    </div>
-                                </div>
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2012 - 2015</span>
+                                <h4 class="timeline-title">Bachillerato en Informática (Plan 2004)</h4>
+                                <p class="timeline-subtitle">UTU — Rivera, Uruguay</p>
+                                <p class="timeline-description">Formación técnica en tecnologías de la información con enfoque práctico y orientado al mercado laboral.</p>
+                                <ul class="timeline-details mt-3">
+                                    <li><strong>Programación:</strong> Fundamentos de lógica, algoritmos y desarrollo de software.</li>
+                                    <li><strong>Redes:</strong> Configuración y mantenimiento de redes de datos, protocolos y servicios.</li>
+                                    <li><strong>Base de datos:</strong> Diseño, creación y administración de bases de datos relacionales.</li>
+                                    <li><strong>Soporte técnico:</strong> Diagnóstico, mantenimiento y reparación de equipos informáticos.</li>
+                                    <li><strong>Desarrollo web:</strong> HTML, CSS, JavaScript y páginas dinámicas.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Java / Spring / MySQL / JavaScript -->
-                <div class="projects-section mb-5" data-aos="fade-up">
-                    <h3 class="section-subtitle">Java / Spring / MySQL / JavaScript</h3>
-                    <div class="row justify-content-center g-4">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card project-card h-100">
-                                <img src="image/web1.jpg" class="card-img-top project-img" alt="Consultorio Odontológico - Web" width="800" height="400" loading="lazy" decoding="async">
-                                <div class="card-body project-card-body">
-                                    <h4 class="project-card-title">Consultorio Odontológico — Web</h4>
-                                    <p class="project-card-text">Aplicación web para gestión de consultorio: reservas, pacientes, agenda y panel administrativo. Frontend en JavaScript y backend en Spring + MySQL.</p>
-                                    <div class="d-flex gap-2">
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalJava1">Vista</button>
-                                        <a href="https://github.com/AnderCodex/consultorio-odontologico" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">GitHub</a>
-                                    </div>
+    <!-- Projects -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Proyectos Destacados</h2>
+
+            <!-- C# / .NET -->
+            <div class="projects-section mb-5" data-aos="fade-up">
+                <h3 class="section-subtitle"><i class="fas fa-code me-2"></i>C# / .NET</h3>
+                <div class="row justify-content-center g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card project-card h-100">
+                            <div class="project-placeholder"><i class="fas fa-plane"></i></div>
+                            <div class="card-body project-card-body">
+                                <h4 class="project-card-title">Aeropuertos Americanos</h4>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">C#</span>
+                                    <span class="tech-badge">.NET</span>
+                                    <span class="tech-badge">SQL Server</span>
+                                    <span class="tech-badge">MVC</span>
+                                </div>
+                                <p class="project-card-text">Sistema web para gestionar aeropuertos, vuelos y venta de pasajes. Gestión completa de ciudades, vuelos y clientes.</p>
+                                <div class="project-metrics">
+                                    <span class="metric-item"><i class="fas fa-layer-group"></i> 3 capas</span>
+                                    <span class="metric-item"><i class="fas fa-database"></i> CRUD completo</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProject1">Vista</button>
+                                    <a href="https://github.com/AnderCodex/AeropuertosAmericanos.git" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">GitHub</a>
                                 </div>
                             </div>
                         </div>
-
-                                                <div class="col-lg-4 col-md-6">
-                                                        <div class="card project-card h-100">
-                                                                <div id="carouselApiProjectIndex" class="carousel slide" data-bs-ride="carousel">
-                                                                    <div class="carousel-inner">
-                                                                        <div class="carousel-item active">
-                                                                            <img src="image/1.jpg" class="d-block w-100 project-img" alt="Bios Work captura 1">
-                                                                        </div>
-                                                                        <div class="carousel-item">
-                                                                            <img src="image/2.jpg" class="d-block w-100 project-img" alt="Bios Work captura 2">
-                                                                        </div>
-                                                                        <div class="carousel-item">
-                                                                            <img src="image/3.jpg" class="d-block w-100 project-img" alt="Bios Work captura 3">
-                                                                        </div>
-                                                                        <div class="carousel-item">
-                                                                            <img src="image/4.jpg" class="d-block w-100 project-img" alt="Bios Work captura 4">
-                                                                        </div>
-                                                                        <div class="carousel-item">
-                                                                            <img src="image/5.jpg" class="d-block w-100 project-img" alt="Bios Work captura 5">
-                                                                        </div>
-                                                                    </div>
-                                                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselApiProjectIndex" data-bs-slide="prev">
-                                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                                        <span class="visually-hidden">Anterior</span>
-                                                                    </button>
-                                                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselApiProjectIndex" data-bs-slide="next">
-                                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                                        <span class="visually-hidden">Siguiente</span>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="card-body project-card-body">
-                                                                        <h4 class="project-card-title">Bios Work</h4>
-                                                                        <p class="project-card-text">Plataforma para publicar ofertas laborales y gestionar postulaciones. Construida con Spring Boot, seguridad JWT y persistencia en MySQL.</p>
-                                                                        <div class="d-flex gap-2">
-                                                                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalJava2">Vista</button>
-                                                                                <a href="https://github.com/AnderCodex/consultorio-odontologico" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">GitHub</a>
-                                                                        </div>
-                                                                </div>
-                                                        </div>
-                                                </div>
                     </div>
-                </div>
 
-                <!-- Flutter / Dart -->
-                <div class="projects-section mb-5" data-aos="fade-up">
-                    <h3 class="section-subtitle">Flutter / Dart</h3>
-                    <div class="row justify-content-center g-4">
-                        
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card project-card h-100">
-                                <div id="carouselCronoFitIndex" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="image/app1.jpg" class="d-block w-100 project-img" alt="CronoFit captura 1">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="image/app2.jpg" class="d-block w-100 project-img" alt="CronoFit captura 2">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="image/app3.jpg" class="d-block w-100 project-img" alt="CronoFit captura 3">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="image/app4.jpg" class="d-block w-100 project-img" alt="CronoFit captura 4">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="image/app5.jpg" class="d-block w-100 project-img" alt="CronoFit captura 5">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="image/app6.jpg" class="d-block w-100 project-img" alt="CronoFit captura 6">
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCronoFitIndex" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Anterior</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCronoFitIndex" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Siguiente</span>
-                                    </button>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card project-card h-100">
+                            <div class="project-placeholder"><i class="fas fa-clipboard-list"></i></div>
+                            <div class="card-body project-card-body">
+                                <h4 class="project-card-title">Sistema de Gestión de Solicitudes</h4>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">.NET Framework</span>
+                                    <span class="tech-badge">SQL Server</span>
+                                    <span class="tech-badge">Auth</span>
                                 </div>
-                                <div class="card-body project-card-body">
-                                    <h4 class="project-card-title">CronoFit — App de Gimnasio</h4>
-                                    <p class="project-card-text">Aplicación móvil multiplataforma para clientes y entrenadores: cronogramas diarios de ejercicios y planes de comidas, con funcionamiento offline y gestión local.</p>
-                                    <div class="d-flex gap-2">
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFlutter2">Vista</button>
-                                        <a href="https://github.com/AnderCodex/obligatorio_flutter" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">GitHub</a>
-                                    </div>
+                                <p class="project-card-text">Sistema para mutualistas con autenticación, asignación de números y estadísticas en tiempo real.</p>
+                                <div class="project-metrics">
+                                    <span class="metric-item"><i class="fas fa-lock"></i> Autenticación</span>
+                                    <span class="metric-item"><i class="fas fa-chart-bar"></i> Estadísticas</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProject2">Vista</button>
+                                    <a href="https://github.com/AnderCodex/Sist-de-Gestion-de-Solicitudes-Consultorio.git" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card project-card h-100">
+                            <img src="image/Proyecto3.jpg" class="card-img-top project-img" alt="Sistema de Ventas Farmacia" width="800" height="400" loading="lazy" decoding="async">
+                            <div class="card-body project-card-body">
+                                <h4 class="project-card-title">Sistema de Ventas "Farmacia"</h4>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">C#</span>
+                                    <span class="tech-badge">.NET</span>
+                                    <span class="tech-badge">3 capas</span>
+                                </div>
+                                <p class="project-card-text">Sistema de ventas con interfaz pública y panel administrativo. Arquitectura en 3 capas.</p>
+                                <div class="project-metrics">
+                                    <span class="metric-item"><i class="fas fa-users"></i> Admin + Cliente</span>
+                                    <span class="metric-item"><i class="fas fa-shopping-cart"></i> E-commerce</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProject3">Vista</button>
+                                    <a href="https://github.com/AnderCodex/Sistema-de-Ventas.git" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">GitHub</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Project Modals -->
-        <div class="modal fade" id="modalProject1" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Aeropuertos Americanos</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            <!-- Java / Spring / MySQL -->
+            <div class="projects-section mb-5" data-aos="fade-up">
+                <h3 class="section-subtitle"><i class="fab fa-java me-2"></i>Java / Spring / MySQL</h3>
+                <div class="row justify-content-center g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card project-card h-100">
+                            <img src="image/web1.jpg" class="card-img-top project-img" alt="Consultorio Odontológico - Web" width="800" height="400" loading="lazy" decoding="async">
+                            <div class="card-body project-card-body">
+                                <h4 class="project-card-title">Consultorio Odontológico — Web</h4>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">Spring Boot</span>
+                                    <span class="tech-badge">MySQL</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                </div>
+                                <p class="project-card-text">Gestión de consultorio: reservas, pacientes, agenda y panel administrativo.</p>
+                                <div class="project-metrics">
+                                    <span class="metric-item"><i class="fas fa-calendar"></i> Reservas</span>
+                                    <span class="metric-item"><i class="fas fa-user-md"></i> Gestión</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalJava1">Vista</button>
+                                    <a href="https://github.com/AnderCodex/consultorio-odontologico" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <img src="image/bakground-code.gif" alt="Aeropuertos Americanos" class="img-fluid mb-3">
-                        <p>Sistema web para gestionar aeropuertos, vuelos y venta de pasajes. Tecnologías: .NET, SQL Server.</p>
-                        <p><strong>Características:</strong> Gestión de ciudades, aeropuertos, vuelos y clientes.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="https://github.com/AnderCodex/AeropuertosAmericanos.git" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="modal fade" id="modalProject2" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Sistema de Gestión de Solicitudes</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="image/bakground-code.gif" alt="Sistema de Gestión" class="img-fluid mb-3">
-                        <p>Sistema con autenticación, asignación de números y estadísticas. .NET Framework + SQL Server.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="https://github.com/AnderCodex/Sist-de-Gestion-de-Solicitudes-Consultorio.git" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="modalProject3" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Sistema de Ventas "Farmacia"</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="image/Proyecto3.jpg" alt="Sistema de Ventas" class="img-fluid mb-3">
-                        <p>Sistema de ventas con panel administrativo. Arquitectura en 3 capas, C# y .NET.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="https://github.com/AnderCodex/Sistema-de-Ventas.git" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="modalJava1" tabindex="-1" aria-labelledby="modalJava1Label" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalJava1Label">Gestor de Inventario (Java)</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                                    <div id="carouselModalJava1" class="carousel slide mb-3" data-bs-ride="carousel">
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="image/web1.jpg" class="d-block w-100" alt="Web captura 1">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="image/web2.jpg" class="d-block w-100" alt="Web captura 2">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="image/web3.jpg" class="d-block w-100" alt="Web captura 3">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="image/web4.jpg" class="d-block w-100" alt="Web captura 4">
-                                            </div>
-                                        </div>
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselModalJava1" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Anterior</span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselModalJava1" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Siguiente</span>
-                                        </button>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card project-card h-100">
+                            <div id="carouselApiProjectIndex" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="image/1.jpg" class="d-block w-100 project-img" alt="Bios Work captura 1">
                                     </div>
-                                    <p>Backend en Spring Boot, persistencia en MySQL y frontend en JavaScript. Panel administrativo y gestión avanzada de inventarios.</p>
-                        <p><strong>Tecnologías:</strong> Spring Boot, MySQL, JavaScript, Docker.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="https://github.com/AnderCodex/consultorio-odontologico" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="modalJava2" tabindex="-1" aria-labelledby="modalJava2Label" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalJava2Label">Bios Work — API</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div id="carouselModalJava2" class="carousel slide mb-3" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="image/1.jpg" class="d-block w-100" alt="Bios Work captura 1">
+                                    <div class="carousel-item">
+                                        <img src="image/2.jpg" class="d-block w-100 project-img" alt="Bios Work captura 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="image/3.jpg" class="d-block w-100 project-img" alt="Bios Work captura 3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="image/4.jpg" class="d-block w-100 project-img" alt="Bios Work captura 4">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="image/5.jpg" class="d-block w-100 project-img" alt="Bios Work captura 5">
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="image/2.jpg" class="d-block w-100" alt="Bios Work captura 2">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselApiProjectIndex" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselApiProjectIndex" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
+                            </div>
+                            <div class="card-body project-card-body">
+                                <h4 class="project-card-title">Bios Work</h4>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">Spring Boot</span>
+                                    <span class="tech-badge">JWT</span>
+                                    <span class="tech-badge">MySQL</span>
+                                    <span class="tech-badge">REST API</span>
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="image/3.jpg" class="d-block w-100" alt="Bios Work captura 3">
+                                <p class="project-card-text">Plataforma para publicar ofertas laborales y gestionar postulaciones con seguridad JWT.</p>
+                                <div class="project-metrics">
+                                    <span class="metric-item"><i class="fas fa-shield-alt"></i> JWT Auth</span>
+                                    <span class="metric-item"><i class="fas fa-briefcase"></i> Empleos</span>
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="image/4.jpg" class="d-block w-100" alt="Bios Work captura 4">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="image/5.jpg" class="d-block w-100" alt="Bios Work captura 5">
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalJava2">Vista</button>
+                                    <a href="#" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer" title="Repo pendiente de publicar">GitHub</a>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselModalJava2" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselModalJava2" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Siguiente</span>
-                            </button>
                         </div>
-                        <p>Sistema para publicar ofertas laborales y gestionar postulaciones: endpoints para empresas, ofertas, postulantes y gestión de estado de aplicaciones. Construido con Spring Boot, seguridad con JWT y persistencia en MySQL.</p>
-                        <p><strong>Tecnologías:</strong> Spring Boot, JWT y MySQL.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="https://github.com/AnderCodex/consultorio-odontologico" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Flutter Modals -->
-        <div class="modal fade" id="modalFlutter1" tabindex="-1" aria-labelledby="modalFlutter1Label" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalFlutter1Label">App Móvil Inventario (Flutter)</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="image/Proyecto3.jpg" alt="App Móvil Inventario" class="img-fluid mb-3">
-                        <p>App móvil desarrollada con Flutter/Dart, con sincronización a backend REST y almacenamiento local SQLite.</p>
-                        <p><strong>Tecnologías:</strong> Flutter, Dart, SQLite, REST APIs.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="modalFlutter2" tabindex="-1" aria-labelledby="modalFlutter2Label" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalFlutter2Label">CronoFit — App de Gimnasio</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div id="carouselModalCronoFit" class="carousel slide mb-3" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="image/app1.jpg" class="d-block w-100" alt="CronoFit captura 1">
+            <!-- Flutter / Dart -->
+            <div class="projects-section mb-5" data-aos="fade-up">
+                <h3 class="section-subtitle"><i class="fas fa-mobile-alt me-2"></i>Flutter / Dart</h3>
+                <div class="row justify-content-center g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card project-card h-100">
+                            <div id="carouselCronoFitIndex" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="image/app1.jpg" class="d-block w-100 project-img" alt="CronoFit captura 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="image/app2.jpg" class="d-block w-100 project-img" alt="CronoFit captura 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="image/app3.jpg" class="d-block w-100 project-img" alt="CronoFit captura 3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="image/app4.jpg" class="d-block w-100 project-img" alt="CronoFit captura 4">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="image/app5.jpg" class="d-block w-100 project-img" alt="CronoFit captura 5">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="image/app6.jpg" class="d-block w-100 project-img" alt="CronoFit captura 6">
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="image/app2.jpg" class="d-block w-100" alt="CronoFit captura 2">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCronoFitIndex" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselCronoFitIndex" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
+                            </div>
+                            <div class="card-body project-card-body">
+                                <h4 class="project-card-title">CronoFit — App de Gimnasio</h4>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">Flutter</span>
+                                    <span class="tech-badge">Dart</span>
+                                    <span class="tech-badge">SQLite</span>
+                                    <span class="tech-badge">Offline</span>
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="image/app3.jpg" class="d-block w-100" alt="CronoFit captura 3">
+                                <p class="project-card-text">App multiplataforma para rutinas de ejercicios y planes nutricionales con funcionamiento offline.</p>
+                                <div class="project-metrics">
+                                    <span class="metric-item"><i class="fas fa-wifi-slash"></i> Offline</span>
+                                    <span class="metric-item"><i class="fas fa-dumbbell"></i> Fitness</span>
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="image/app4.jpg" class="d-block w-100" alt="CronoFit captura 4">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="image/app5.jpg" class="d-block w-100" alt="CronoFit captura 5">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="image/app6.jpg" class="d-block w-100" alt="CronoFit captura 6">
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFlutter2">Vista</button>
+                                    <a href="https://github.com/AnderCodex/obligatorio_flutter" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">GitHub</a>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselModalCronoFit" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselModalCronoFit" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Siguiente</span>
-                            </button>
                         </div>
-                        <p><strong>Resumen:</strong> CronoFit es una aplicación móvil multiplataforma diseñada para clientes de un personal trainer. Entrega diariamente rutinas de ejercicios y planes nutricionales, almacenando la información localmente para uso sin conexión.</p>
-                        <p><strong>Valor para el cliente:</strong> Muestra la rutina del día al abrir la app y permite ver las comidas del día; incluye selector de fecha para consultar planes de otras jornadas.</p>
-                        <p><strong>Funciones para el entrenador:</strong> Acceso protegido por contraseña para gestionar ejercicios (crear/editar/eliminar), subir fotos desde cámara o galería, y asignar rutinas y comidas por fecha.</p>
-                        <p><strong>Datos y tecnología:</strong> Almacenamiento local en SQLite (sqflite), autenticación con SharedPreferences, validaciones amigables y datos de prueba precargados.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="https://github.com/AnderCodex/obligatorio_flutter" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        
+    <!-- Certifications -->
+    <section id="certifications" class="certifications-section">
+        <div class="container">
+            <h2 class="section-title text-center">Certificaciones y Cursos</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-code"></i></div>
+                        <h4 class="cert-title">Programador Web .NET</h4>
+                        <p class="cert-issuer">Instituto Universitario BIOS</p>
+                        <p class="cert-date"><i class="far fa-calendar-alt me-1"></i> 2022</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h4 class="cert-title">Analista Programador Web .NET</h4>
+                        <p class="cert-issuer">Instituto Universitario BIOS</p>
+                        <p class="cert-date"><i class="far fa-calendar-alt me-1"></i> 2023</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-database"></i></div>
+                        <h4 class="cert-title">Analista GeneXus Jr</h4>
+                        <p class="cert-issuer">Instituto Universitario BIOS</p>
+                        <p class="cert-date"><i class="far fa-calendar-alt me-1"></i> 2023</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h4 class="cert-title">Bachillerato en Informática (Plan 2004)</h4>
+                        <p class="cert-issuer">UTU — Rivera</p>
+                        <p class="cert-date"><i class="far fa-calendar-alt me-1"></i> 2015</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Testimonials removed per user request -->
+    <!-- Project Modals -->
+    <div class="modal fade" id="modalProject1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Aeropuertos Americanos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-placeholder mb-3"><i class="fas fa-plane"></i></div>
+                    <div class="project-tech-badges mb-3">
+                        <span class="tech-badge">C#</span>
+                        <span class="tech-badge">.NET</span>
+                        <span class="tech-badge">SQL Server</span>
+                        <span class="tech-badge">MVC</span>
+                    </div>
+                    <p>Sistema web para gestionar aeropuertos, vuelos y venta de pasajes. Permite la gestión completa de ciudades, aeropuertos, vuelos y clientes.</p>
+                    <p><strong>Características:</strong> Arquitectura en capas, CRUD completo, interfaz intuitiva.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/AnderCodex/AeropuertosAmericanos.git" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalProject2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sistema de Gestión de Solicitudes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-placeholder mb-3"><i class="fas fa-clipboard-list"></i></div>
+                    <div class="project-tech-badges mb-3">
+                        <span class="tech-badge">.NET Framework</span>
+                        <span class="tech-badge">SQL Server</span>
+                        <span class="tech-badge">Autenticación</span>
+                    </div>
+                    <p>Sistema con autenticación, asignación de números y estadísticas en tiempo real para mutualistas.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/AnderCodex/Sist-de-Gestion-de-Solicitudes-Consultorio.git" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalProject3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sistema de Ventas "Farmacia"</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="image/Proyecto3.jpg" alt="Sistema de Ventas" class="img-fluid mb-3 rounded">
+                    <div class="project-tech-badges mb-3">
+                        <span class="tech-badge">C#</span>
+                        <span class="tech-badge">.NET</span>
+                        <span class="tech-badge">3 capas</span>
+                    </div>
+                    <p>Sistema de ventas con panel administrativo y vista pública. Arquitectura en 3 capas con C# y .NET.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/AnderCodex/Sistema-de-Ventas.git" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalJava1" tabindex="-1" aria-labelledby="modalJava1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalJava1Label">Consultorio Odontológico — Web</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselModalJava1" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="image/web1.jpg" class="d-block w-100" alt="Web captura 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/web2.jpg" class="d-block w-100" alt="Web captura 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/web3.jpg" class="d-block w-100" alt="Web captura 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/web4.jpg" class="d-block w-100" alt="Web captura 4">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselModalJava1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselModalJava1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                    <div class="project-tech-badges mb-3">
+                        <span class="tech-badge">Spring Boot</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">JavaScript</span>
+                    </div>
+                    <p>Backend en Spring Boot, persistencia en MySQL y frontend en JavaScript. Panel administrativo y gestión de inventarios.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/AnderCodex/consultorio-odontologico" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalJava2" tabindex="-1" aria-labelledby="modalJava2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalJava2Label">Bios Work — Plataforma Laboral</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselModalJava2" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="image/1.jpg" class="d-block w-100" alt="Bios Work captura 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/2.jpg" class="d-block w-100" alt="Bios Work captura 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/3.jpg" class="d-block w-100" alt="Bios Work captura 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/4.jpg" class="d-block w-100" alt="Bios Work captura 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/5.jpg" class="d-block w-100" alt="Bios Work captura 5">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselModalJava2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselModalJava2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                    <div class="project-tech-badges mb-3">
+                        <span class="tech-badge">Spring Boot</span>
+                        <span class="tech-badge">JWT</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">REST API</span>
+                    </div>
+                    <p>Sistema para publicar ofertas laborales y gestionar postulaciones. Endpoints para empresas, ofertas, postulantes y gestión de aplicaciones.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-dark" target="_blank" rel="noopener noreferrer" title="Repo pendiente de publicar">Ver en GitHub</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalFlutter1" tabindex="-1" aria-labelledby="modalFlutter1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFlutter1Label">App Móvil Inventario (Flutter)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="image/Proyecto3.jpg" alt="App Móvil Inventario" class="img-fluid mb-3 rounded">
+                    <p>App móvil desarrollada con Flutter/Dart, con sincronización a backend REST y almacenamiento local SQLite.</p>
+                    <p><strong>Tecnologías:</strong> Flutter, Dart, SQLite, REST APIs.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalFlutter2" tabindex="-1" aria-labelledby="modalFlutter2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFlutter2Label">CronoFit — App de Gimnasio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselModalCronoFit" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="image/app1.jpg" class="d-block w-100" alt="CronoFit captura 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/app2.jpg" class="d-block w-100" alt="CronoFit captura 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/app3.jpg" class="d-block w-100" alt="CronoFit captura 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/app4.jpg" class="d-block w-100" alt="CronoFit captura 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/app5.jpg" class="d-block w-100" alt="CronoFit captura 5">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/app6.jpg" class="d-block w-100" alt="CronoFit captura 6">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselModalCronoFit" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselModalCronoFit" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                    <div class="project-tech-badges mb-3">
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">Dart</span>
+                        <span class="tech-badge">SQLite</span>
+                        <span class="tech-badge">Offline</span>
+                    </div>
+                    <p><strong>Resumen:</strong> App multiplataforma para clientes de un personal trainer. Entrega diariamente rutinas de ejercicios y planes nutricionales con funcionamiento offline.</p>
+                    <p><strong>Funcionalidades:</strong> Rutina del día, plan de comidas, gestión de ejercicios para el entrenador con fotos desde cámara/galería.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/AnderCodex/obligatorio_flutter" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact -->
     <section id="contact" class="py-5">
@@ -592,7 +811,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card shadow-sm p-4 mb-4" data-aos="fade-up">
-                        <form id="contact-form" action="mailto:skipperyt2020@gmail.com" method="post" enctype="text/plain" class="row g-3">
+                        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="row g-3">
                             <div class="col-md-6">
                                 <label for="name" class="form-label">Nombre</label>
                                 <input type="text" class="form-control" id="name" name="name" required>
@@ -602,24 +821,27 @@
                                 <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="col-12">
+                                <label for="subject" class="form-label">Asunto</label>
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Ej: Proyecto web, consulta, colaboración..." required>
+                            </div>
+                            <div class="col-12">
                                 <label for="message" class="form-label">Mensaje</label>
-                                <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                                <textarea id="message" name="message" class="form-control" rows="4" required placeholder="Describe tu proyecto o consulta..."></textarea>
                             </div>
                             <div class="col-12 d-flex gap-2 justify-content-center">
                                 <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-                                <a href="#contact" class="btn btn-outline-secondary">Limpiar</a>
                             </div>
                         </form>
                     </div>
                     <div class="text-center">
                         <div class="d-flex flex-wrap justify-content-center">
-                            <a href="https://www.linkedin.com/in/anderson-sosa-720b2b260/" class="btn btn-primary contact-btn m-2" target="_blank" rel="noopener noreferrer" aria-label="Enlace a LinkedIn" >
+                            <a href="https://www.linkedin.com/in/anderson-sosa-720b2b260/" class="btn btn-primary contact-btn m-2" target="_blank" rel="noopener noreferrer" aria-label="Enlace a LinkedIn">
                                 <i class="fab fa-linkedin me-2"></i> LinkedIn
                             </a>
                             <a href="mailto:skipperyt2020@gmail.com" class="btn btn-danger contact-btn m-2">
                                 <i class="fas fa-envelope me-2"></i> Gmail
                             </a>
-                            <a href="https://github.com/AnderCodex" class="btn btn-dark contact-btn m-2" target="_blank" rel="noopener noreferrer" aria-label="Enlace a GitHub" >
+                            <a href="https://github.com/AnderCodex" class="btn btn-dark contact-btn m-2" target="_blank" rel="noopener noreferrer" aria-label="Enlace a GitHub">
                                 <i class="fab fa-github me-2"></i> GitHub
                             </a>
                             <a href="image/CV_Anderson_Sosa_Profesional.pdf" download class="btn btn-success contact-btn m-2">
@@ -633,11 +855,17 @@
     </section>
 
     <!-- WhatsApp + Footer -->
-    <a href="https://wa.me/59892967616" target="_blank" class="whatsapp-btn" 
+    <a href="https://wa.me/59892967616" target="_blank" class="whatsapp-btn"
     rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <footer class="text-center">
         <div class="container">
-            <p>&copy; 2025 Anderson Sosa. Todos los derechos reservados.</p>
+            <p class="mb-1">&copy; <span id="current-year"></span> Anderson Sosa. Todos los derechos reservados.</p>
+            <p class="mb-0 small opacity-75">Desarrollado con <i class="fas fa-heart text-danger"></i> en Montevideo, Uruguay</p>
         </div>
     </footer>
 
